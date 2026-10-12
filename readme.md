@@ -1,99 +1,48 @@
-# Study Path Scraper
+# thestudypath_scraper
 
-## Overview
+Python scraper for StudyPath chapter exercise images and PDF assembly.
 
-This Python script is designed to scrape educational content from The Study Path website, specifically targeting RS Aggarwal Solutions for Class 9, Chapter 15: Volume and Surface Area of Solids. The scraper extracts exercise images and compiles them into organized PDF documents for offline study purposes.
+## Why this exists
+
+Educational content archival for accounts you own can be automated with resumable downloads and PDF bundling.
 
 ## Features
 
-- **Automated Scraping**: Extracts all exercise pages (15A, 15B, 15C, 15D) and Multiple Choice Questions (MCQs) from the specified chapter.
-- **Image Extraction**: Downloads high-quality images of mathematical problems and solutions.
-- **PDF Generation**: Converts downloaded images into well-formatted PDF documents.
-- **Organized Output**: Creates a structured directory with separate folders for images and PDFs.
-- **Error Handling**: Robust error handling for network requests and file operations.
-- **Concurrent Processing**: Utilizes concurrent futures for efficient downloading of multiple images.
+- Scraper under `code/`
+- Generated PDFs under `pdfs/`
+- CI pytest gate
 
-## Requirements
+## Install
 
-- Python 3.7+
-- Required Python packages:
-  - `requests`
-  - `beautifulsoup4`
-  - `Pillow`
+```bash
+git clone https://github.com/HackerX-offical/thestudypath_scraper.git
+cd thestudypath_scraper
+pip install -r requirements.txt
+```
 
-## Installation
+## Quick start
 
-1. **Clone or Download**: Ensure you have the script file (`main.py`) in your project directory.
+```bash
+python3 code/main.py
+```
 
-2. **Set up Virtual Environment** (Recommended):
+## Output
 
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+Images and PDFs under `pdfs/` per chapter.
 
-3. **Install Dependencies**:
-   ```bash
-   pip install requests beautifulsoup4 Pillow
-   ```
+## Develop
 
-## Usage
+```bash
+pytest tests -q
+```
 
-1. **Run the Script**:
+## Architecture
 
-   ```bash
-   python main.py
-   ```
-
-   The script will automatically:
-   - Install any missing dependencies
-   - Scrape the main chapter page
-   - Identify and download exercise pages
-   - Extract and download all relevant images
-   - Generate PDF files for each exercise
-   - Clean up temporary image files
-
-2. **Output Structure**:
-   ```
-   study_path_chapter_15/
-   ├── images/          # Temporary image storage (cleaned up after PDF creation)
-   ├── pdfs/            # Final PDF documents
-   │   ├── Exercise_15A.pdf
-   │   ├── Exercise_15B.pdf
-   │   ├── Exercise_15C.pdf
-   │   ├── Exercise_15D.pdf
-   │   └── MCQs.pdf
-   └── readme.md        # This file
-   ```
-
-## How It Works
-
-1. **Page Discovery**: The script starts by parsing the main chapter page to find links to individual exercise pages.
-2. **Image Extraction**: For each exercise page, it identifies and downloads all mathematical content images.
-3. **PDF Compilation**: Images are processed and combined into PDF format using Pillow's image handling capabilities.
-4. **Cleanup**: Temporary image files are removed after successful PDF creation to save disk space.
-
-## Important Notes
-
-- This tool is intended for educational purposes only.
-- Respect website terms of service and avoid overloading servers with excessive requests.
-- The script includes appropriate delays and headers to minimize impact on the source website.
-- Internet connection is required for scraping and downloading content.
-
-## Troubleshooting
-
-- **ModuleNotFoundError**: Ensure all required packages are installed in your Python environment.
-- **Network Errors**: Check your internet connection and try again later.
-- **Permission Errors**: Ensure write permissions in the output directory.
-- **Incomplete Downloads**: The script is designed to be resilient; re-run if interrupted.
-
-## Author
-
-**Suryanshu Nabheet**
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for module layout and extension points.
 
 ## Ethics
 
-Use only on systems and content you are **authorized** to access. See [SECURITY.md](./SECURITY.md).
+Use only on systems and content you are **authorized** to test. See [SECURITY.md](./SECURITY.md).
 
 ## License
 
