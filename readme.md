@@ -91,13 +91,9 @@ This Python script is designed to scrape educational content from The Study Path
 
 **Suryanshu Nabheet**
 
-## License
+## Ethics
 
-This project is for educational purposes. Please ensure compliance with the terms of service of The Study Path website and applicable copyright laws.
-
-## Disclaimer
-
-This tool scrapes content from external websites. Users are responsible for ensuring their use complies with applicable laws and website policies. The author is not responsible for misuse of this tool.
+Use only on systems and content you are **authorized** to access. See [SECURITY.md](./SECURITY.md).
 
 ## License
 
