@@ -98,3 +98,8 @@ This project is for educational purposes. Please ensure compliance with the term
 ## Disclaimer
 
 This tool scrapes content from external websites. Users are responsible for ensuring their use complies with applicable laws and website policies. The author is not responsible for misuse of this tool.
+
+## License
+
+Licensed under the [HackerX License](./LICENSE). Redistributions must retain copyright,
+license text, and [NOTICE](./NOTICE) attribution per the license terms.

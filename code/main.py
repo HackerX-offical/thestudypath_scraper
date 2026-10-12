@@ -215,7 +215,7 @@ class StudyPathScraper:
                     append_images=image_objects[1:]
                 )
                 
-                print(f"✓ PDF saved: {output_path}")
+                print(f" PDF saved: {output_path}")
                 return True
             
         except Exception as e:
