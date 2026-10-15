@@ -15,7 +15,7 @@ Educational content archival for accounts you own can be automated with resumabl
 ## Install
 
 ```bash
-git clone https://github.com/HackerX-offical/thestudypath_scraper.git
+git clone https://github.com/HackerX-official/thestudypath_scraper.git
 cd thestudypath_scraper
 pip install -r requirements.txt
 ```
